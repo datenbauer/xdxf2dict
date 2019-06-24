@@ -30,7 +30,7 @@ If you would like to sort your dictionary entries, there is also a stylesheet fo
 `$ xsltproc xdxf-sort.xsl source > output`
 
 ### Find out number of entries
-To analyze a XDXF dictionary and find out how may entries (<ar>) are in there, use the following command:<br>
+To analyze a XDXF dictionary and find out how may entries (&lt;ar&gt;) are in there, use the following command:<br>
   ```sh
   $ cat dictionary.xdxf | awk '{n += gsub(/\<ar\>/, "")} END {print n " entries"}'
   $ 81 entries
