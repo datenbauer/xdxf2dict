@@ -28,3 +28,10 @@ Now you can copy the result into your dictionary folder and use it in your appli
 ### Sort XDXF entries
 If you would like to sort your dictionary entries, there is also a stylesheet for that:<br>
 `$ xsltproc xdxf-sort.xsl source > output`
+
+### Find out number of entries
+To analyze a XDXF dictionary and find out how may entries (<ar>) are in there, use the following command:<br>
+  ```sh
+  $ cat dictionary.xdxf | awk '{n += gsub(/\<ar\>/, "")} END {print n " entries"}'
+  $ 81 entries
+  ```
