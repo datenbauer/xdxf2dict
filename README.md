@@ -12,6 +12,8 @@ $ sudo apt install xsltproc dictfmt
 
 ## How to
 
+### Convert XDXF -> DICT
+
 1. Create or download a XDXF dictionary source file. If you want to create one yourself, look [here](https://github.com/soshial/xdxf_makedict/blob/master/format_standard/xdxf_description.md) for the specifications.
 2. Download the XSL stylesheet `xdxf-2-dictc5.xsl`. This one contains the information to transform the XDXF source into a DICT source file.<br>
 Compile with:<br>
@@ -22,3 +24,7 @@ where `source` is your dictionary file and `output` is the name of the output (e
 where `basename` is the name of your dictionary (e.g. 'mydict') and `dictfile` is the previously generated DICT source.
 
 Now you can copy the result into your dictionary folder and use it in your application.
+
+### Sort XDXF entries
+If you would like to sort your dictionary entries, there is also a stylesheet for that:<br>
+`$ xsltproc xdxf-sort.xsl source > output`
